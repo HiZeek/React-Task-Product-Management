@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.header-left > a {
+    text-decoration: none;
+    color: var(--cc-black);
+}
+
+.header-left > a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.header-left > .current-link {
+    color: var(--c-primary);
+}
+
+.header-center > a > img {
+    width: 31px;
+    height: 29px;
+}
+
+.header-right > img {
+    cursor: pointer;
+}
+
+.header-right > img:not(:last-child) {
+    margin-right: 1.4rem;
+}
+
+.header-right > img:nth-child(3) {
+    width: 20px;
+    height: 18px;
+}
+
+.header-right > img:nth-child(2) {
+    width: 8px;
+    height: 4px;
+    transform: rotate(180deg);
+    transition: .5s
+}
+
+.header-right > img:nth-child(1) {
+    width: 12px;
+    height: auto;
+}
+
+.select-currency {
+    transform: rotate(0) !important;
+    transition: .5s;
+}
