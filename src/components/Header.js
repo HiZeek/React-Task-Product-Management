@@ -10,10 +10,16 @@ import UpArrow from '../img/Up_Arrow.png';
 const Header = () => {
 
     const selectCurrency = () => {
-        const select = document.querySelector('.select');
-        select.addEventListener('click', function() {
-            select.classList.toggle('select-currency');
-        });
+        // const select = document.querySelector('.select');
+        // select.addEventListener('click', function() {
+            // if(select.classList.contains('select-currency')) {
+            //         select.classList.remove('select-currency')
+            //     } else {
+            //         select.classList.add('select-currency')
+            //     }
+            // select.classList.toggle('select-currency');
+            // console.log('Hello');
+        // });
     }
 
   return (

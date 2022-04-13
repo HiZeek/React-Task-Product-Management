@@ -8,6 +8,7 @@
 .header-left > a {
     text-decoration: none;
     color: var(--cc-black);
+    padding-bottom: 10px;
 }
 
 .header-left > a:not(:last-child) {
@@ -16,6 +17,7 @@
 
 .header-left > .current-link {
     color: var(--c-primary);
+    border-bottom: 2px solid var(--c-primary);
 }
 
 .header-center > a > img {

@@ -5,6 +5,11 @@
   --c-primary: #5ece7b;
   --c-white: #ffffff;
   --font-family: 'Raleway', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
 
   /* --dark-color-lighter: #7E8299;
   --accent-color: #22beaa;
@@ -36,4 +41,8 @@ html {
 body {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.container {
+  padding: 80px 0;
 }
