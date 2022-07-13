@@ -4,6 +4,7 @@ import Second_Image from '../img/Image2.png';
 import Third_Image from '../img/Image3.png';
 import Fourth_Image from '../img/Image4.png';
 import Cart from '../img/Empty_Cart_1.png'
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
 
@@ -42,12 +43,14 @@ const ProductList = () => {
     <div className='product-list'>
         {productList.map((product) => (
             <div className="product-card" key={product.id}>
-                <img src={product.image} alt="product-img" className='product-card-img' />
-                <div className="product-card-cart">
-                    <img src={product.cart} alt="product-cart" className='cart' />
-                </div>
-                <p className='product-card-title'>{product.title}</p>
-                <p className='product-card-price'>{product.price}</p>
+                <Link to={`/product/${product.id}`}>
+                    <img src={product.image} alt="product-img" className='product-card-img' />
+                    <div className="product-card-cart">
+                        <img src={product.cart} alt="product-cart" className='cart' />
+                    </div>
+                    <p className='product-card-title'>{product.title}</p>
+                    <p className='product-card-price'>{product.price}</p>
+                </Link> 
             </div>
         ))}
     </div>
