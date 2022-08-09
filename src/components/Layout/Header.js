@@ -12,12 +12,13 @@ import HeaderCurrencyIcon from "./HeaderCurrencyIcon";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {rotate: false};
+    this.state = { rotate: false };
   }
 
   render() {
     return (
       <header className="header">
+        {this.state.rotate && <HeaderCurrencyIcon />}
         <div className="header-left">
           <Link to="/women" className="current-link">
             Women
@@ -32,8 +33,12 @@ class Header extends Component {
         </div>
         <div className="header-right">
           <img src={Dollar} alt="Currency" />
-          <img src={UpArrow} className={this.state.rotate ? "select-currency" : " "} onClick={() => this.setState({rotate: !this.state.rotate})} alt="up Arrow" />
-          {this.state.rotate && <HeaderCurrencyIcon />}
+          <img
+            src={UpArrow}
+            className={this.state.rotate ? "select-currency" : " "}
+            onClick={() => this.setState({ rotate: !this.state.rotate })}
+            alt="up Arrow"
+          />
           <img src={Cart} alt="Cart" onClick={this.props.onShowCart} />
         </div>
       </header>

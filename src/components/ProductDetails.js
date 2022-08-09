@@ -1,9 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = ({ ProductList }) => {
+const ProductDetails = () => {
 
   const { id } = useParams();
+  // const selectedProduct = products.find(p => p.id === id)
 
   return (
     <div className="product-details">
@@ -36,6 +37,6 @@ const ProductDetails = ({ ProductList }) => {
       <h2>ProductDetails - { id }</h2>
     </div>
   );
-}
+};
 
 export default ProductDetails;
