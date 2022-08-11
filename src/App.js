@@ -27,7 +27,7 @@ const App = () => {
         <ProductList /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/productList/:id" element={<ProductDetails />} />
+          <Route path="/productList/:id" element={<ProductDetails />} exact={true} />
         </Routes>
       </Router>
     </Fragment>

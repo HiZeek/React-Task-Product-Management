@@ -1,23 +1,25 @@
 import React from "react";
+// import { productList } from "../../Data/db.json";
 import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
 
   const { id } = useParams();
-  // const selectedProduct = products.find(p => p.id === id)
+  // const selectedProduct = productList.find(p => p.id === id);
+  // console.log(selectedProduct);
 
   return (
     <div className="product-details">
       {/* <div>
-        <img src={product.image} alt='Product_Image'></img>
-        <img src={product.image} alt='Product_Image'></img>
-        <img src={product.image} alt='Product_Image'></img>
+        <img src={selectedProduct.image} alt='Product_Image'></img>
+        <img src={selectedProduct.image} alt='Product_Image'></img>
+        <img src={selectedProduct.image} alt='Product_Image'></img>
       </div>
       <div>
-        <img src={product.image} alt='Product_Image'></img>
+        <img src={selectedProduct.image} alt='Product_Image'></img>
       </div>
       <div>
-        <h2>{product.title}</h2>
+        <h2>{selectedProduct.title}</h2>
         <div>
           <h3 className='product_description_headings'>SIZE:</h3>
           <ul className='sizes'>

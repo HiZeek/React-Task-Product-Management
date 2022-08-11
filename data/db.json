@@ -1,0 +1,46 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image1.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    },
+    {
+      "id": 2,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image2.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    },
+    {
+      "id": 3,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image4.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    },
+    {
+      "id": 4,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image3.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    },
+    {
+      "id": 5,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image1.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    },
+    {
+      "id": 6,
+      "title": "Apollo Running Short",
+      "price": "$50",
+      "image": "./asset/Image4.png",
+      "cart": "./asset/Empty_Cart_1.png"
+    }
+  ]
+}
