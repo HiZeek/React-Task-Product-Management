@@ -9,10 +9,34 @@ import Dollar from "../asset/Dollar_Icon.png";
 import UpArrow from "../asset/Up_Arrow.png";
 import HeaderCurrencyIcon from "./HeaderCurrencyIcon";
 
+const CATEGORY_QUERY = `
+ {
+    categories {
+      name,
+      products {
+        id
+      }
+    }
+  }
+`;
+
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { rotate: false };
+    this.state = {
+      rotate: false,
+      categoryList: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:4000/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: CATEGORY_QUERY }),
+    })
+      .then((response) => response.json())
+      .then((data) => this.setState({ categoryList: data.data.categories }));
   }
 
   render() {
@@ -20,11 +44,20 @@ class Header extends Component {
       <header className="header">
         {this.state.rotate && <HeaderCurrencyIcon />}
         <div className="header-left">
-          <Link to="/women" className="current-link">
+          {this.state.categoryList.map((category) => (
+            <Link
+              className="current-link"
+              to={`/${category.name}`}
+              key={category.id}
+            >
+              {category.name}
+            </Link>
+          ))}
+          {/* <Link to="/women" className="current-link">
             Women
           </Link>
           <Link to="/men">Men</Link>
-          <Link to="/kids">Kids</Link>
+          <Link to="/kids">Kids</Link> */}
         </div>
         <div className="header-center">
           <Link to="/">

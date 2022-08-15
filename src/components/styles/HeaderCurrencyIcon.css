@@ -4,7 +4,6 @@
   right: 120px;
   width: 114px;
   background-color: white;
-  padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
 }
@@ -13,8 +12,7 @@
   color: var(--cc-black);
   font-size: 18px;
   font-weight: var(--font-weight-medium);
-  padding: 10px 0 10px 0;
-  text-align: center;
+  padding: 1rem;
   cursor: pointer;
 }
 
